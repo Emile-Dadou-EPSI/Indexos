@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>INDEXOS</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="{% static '/vendor/fontawesome-free/css/all.css' %}" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="{% static 'vendor/datatables/dataTables.bootstrap4.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="{% static 'css/sb-admin.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+    <a class="navbar-brand mr-1" href="index.html">Welcome on Indexos</a>
+
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+
+  </nav>
+<form method="POST">
+    {% csrf_token %}
+  <div class="container">
+    <h1>Login</h1>
+    <p>Enter your credentials to login.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" class="form-control" placeholder="Enter email" aria-label="Search" aria-describedby="basic-addon2" name="email">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" class="form-control" placeholder="type password" aria-label="Search" aria-describedby="basic-addon2" name="password">
+    <hr>
+
+
+    <button type="submit" class="login">Login</button>
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href=window.location.href='home'>Sign in</a>.</p>
+  </div>
+</form>
+</body>
+</html>
